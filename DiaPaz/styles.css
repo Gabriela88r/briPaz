@@ -1,0 +1,137 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('fondo.png');  /* Ruta de tu imagen */
+    background-size: cover;  /* La imagen cubre toda la pantalla */
+    background-position: center center;  /* Centrar la imagen */
+    background-attachment: fixed;  /* Hace que la imagen no se desplace con el contenido */
+    background-repeat: no-repeat;  /* Evitar que la imagen se repita */
+    color: white;  /* Cambia el color del texto si es necesario para que se vea bien sobre la imagen */
+}
+
+
+
+h1 {
+    font-size: 36px;
+    color: #f9c74f;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro */
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Cerrar el modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Chatbox */
+#chatbox {
+    margin-top: 20px;
+}
+
+#chatbotMessages {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#userInput {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    background-color: #f9c74f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f1a800;
+}
+
+/* Estilo para el área de las opciones rápidas */
+#quickOptions {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#quickOptions button {
+    background-color: #ffae00;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#quickOptions button:hover {
+    background-color: #ffd000;
+}
+
+/* Estilos del botón de canción */
+#playSongBtn {
+    background-color: #000000;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 12px 25px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+
+#playSongBtn:hover {
+    background-color: #313131;
+}
+
+/* Palomas */
+.paloma {
+    position: absolute;
+    width: 60px; /* Tamaño de la paloma más grande */
+    opacity: 0.9;
+    animation: palomasCayendo 15s linear infinite;
+    z-index: -1;
+}
+
+/* Animación de las palomas cayendo */
+@keyframes palomasCayendo {
+    0% { top: -120px; opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
